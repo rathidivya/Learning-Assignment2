@@ -1,0 +1,42 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="${component.title}"></div>
+    <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">${properties.heading}</h4>
+          <p class="lead mb-0">${properties.subText}
+            <br>${properties.lastText}</p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">${properties.midHeading}</h4>
+		  <sly data-sly-use.multiItems="com.adobe.aem.boot.core.models.MultifieldModel">
+			<sly data-sly-list.iconList="${multiItems.products.listChildren}">
+				<a class="btn btn-outline-light btn-social mx-1" href="#">
+					<i class="fab ${iconList.icon}"></i>
+				</a>
+			</sly>
+		   </sly>
+        </div>
+
+        <!-- Footer About Text -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4">${properties.lastHeading}</h4>
+          <p class="lead mb-0">${properties.lastSubText}
+            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; Your Website 2019</small>
+    </div>
+  </section>
